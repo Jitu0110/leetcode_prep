@@ -1,6 +1,8 @@
 class Solution {
     public int missingNumber(int[] nums) {
         
+        /*
+        Time - O(N)  Space - (N)
         //Exists must have length of 1 greater than nums
         int exists[] = new int[nums.length+1]; 
         
@@ -15,5 +17,19 @@ class Solution {
             }
         }
         return 0;
+        */
+        
+        
+        // Optimal solution => Time - O(N)   Space - O(1) 
+        
+        //Sum of first n natural numbers = n * n+1 / 2
+        int total = nums.length * (nums.length + 1)/2;
+        int sum = 0;
+        
+        for(int i = 0;i<nums.length;i++){
+            sum += nums[i];
+        }
+        return total - sum;
+        
     }
 }
