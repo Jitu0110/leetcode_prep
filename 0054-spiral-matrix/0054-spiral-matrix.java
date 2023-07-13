@@ -26,21 +26,21 @@ class Solution {
             }
             columnEnd--;
             
-            //Left
-            if(rowBegin <= rowEnd) {
+            
+            if(rowBegin <= rowEnd && columnBegin <= columnEnd) {
+             //Left   
               for(int i= columnEnd; i>=columnBegin; i--){
                  res.add(matrix[rowEnd][i]);
               }
-            }
-            rowEnd--;
+             rowEnd--;
             
             //Up
-             if(columnBegin <= columnEnd) {
                for(int i = rowEnd; i>= rowBegin; i--){
                  res.add(matrix[i][columnBegin]);
                }
+             columnBegin++;
              }
-            columnBegin++;
+          
         }
         
         return res;
