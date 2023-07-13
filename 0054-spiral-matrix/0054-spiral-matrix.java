@@ -14,17 +14,19 @@ class Solution {
         
         while(rowBegin <= rowEnd && columnBegin <= columnEnd){
             
-            //Row iterate
+            //Right
             for(int i=columnBegin; i<=columnEnd; i++){
                 res.add(matrix[rowBegin][i]);
             }
             rowBegin++;
             
+            //Down
             for(int i=rowBegin; i<=rowEnd;i++){
                 res.add(matrix[i][columnEnd]);
             }
             columnEnd--;
             
+            //Left
             if(rowBegin <= rowEnd) {
               for(int i= columnEnd; i>=columnBegin; i--){
                  res.add(matrix[rowEnd][i]);
@@ -32,6 +34,7 @@ class Solution {
             }
             rowEnd--;
             
+            //Up
              if(columnBegin <= columnEnd) {
                for(int i = rowEnd; i>= rowBegin; i--){
                  res.add(matrix[i][columnBegin]);
