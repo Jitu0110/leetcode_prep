@@ -1,5 +1,7 @@
 class Solution {
     public int findDuplicate(int[] nums) {
+        
+        //Mix of Linked list and Floyd's Algorithm - Checkout Neetcode video for explanation
         int slow = 0;
         int fast = 0;
         
