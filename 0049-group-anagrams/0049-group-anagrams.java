@@ -11,7 +11,9 @@ class Solution {
                 hash[c - 'a']++;
             }
             //convert frq array to string
-            String key = new String(Arrays.toString(hash));
+            String key = Arrays.toString(hash);
+            
+            System.out.println("Key is: " + key);
 
             map.computeIfAbsent(key, k -> new ArrayList<>());
             map.get(key).add(s);
