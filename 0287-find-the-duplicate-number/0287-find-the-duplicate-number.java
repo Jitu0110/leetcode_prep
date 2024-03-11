@@ -13,10 +13,11 @@ class Solution {
              break;
         }
         
-        int temp = 0;
+        fast = 0;
         
-        while(temp!=slow){
-            temp = nums[temp];
+        //Move them one step at a time
+        while(fast!=slow){
+            fast = nums[fast];
             slow = nums[slow];
         }
         
