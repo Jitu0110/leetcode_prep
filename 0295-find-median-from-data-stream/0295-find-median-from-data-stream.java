@@ -2,6 +2,7 @@
 //Heap find max and min is O(1)
 class MedianFinder {
 
+    //Overall space complexity : O(n)
     PriorityQueue<Integer> minHeap;
     PriorityQueue<Integer> maxHeap;
     
@@ -10,6 +11,7 @@ class MedianFinder {
         maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder()); // For lower half
     }
     
+    //Time complexity : O(log(n))
     public void addNum(int num) {
        if(maxHeap.isEmpty()|| num < maxHeap.peek()){
            maxHeap.offer(num);
@@ -28,6 +30,7 @@ class MedianFinder {
         
     }
     
+     //Time complexity : O(1)
     public double findMedian() {
         if (maxHeap.size() > minHeap.size()) {
             return maxHeap.peek();
