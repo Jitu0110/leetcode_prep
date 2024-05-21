@@ -3,14 +3,14 @@ class Solution {
         
         HashMap<Integer,Integer> map = new HashMap<>();
         
-        List<Integer> arrayList = new ArrayList<Integer>();
+        int[] result = new int[2];
         
         for(int i =0; i < nums.length;i++){
             
             if(map.get(target - nums[i])!= null){
                 int indexFromMap = map.get(target - nums[i]);
-                arrayList.add(indexFromMap);
-                arrayList.add(i);
+                result[0] = indexFromMap;
+                result[1] = i;
                 break;
             }
             else{
@@ -19,8 +19,7 @@ class Solution {
                 
         }
 
-       
-        int[] result = arrayList.stream().mapToInt(i->i).toArray();
+      
         return result;
       
     }
