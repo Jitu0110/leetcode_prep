@@ -23,6 +23,8 @@ class Solution {
                 }
             }
 
+            // Remove characters with a count of 0
+            commonCount.entrySet().removeIf(entry -> entry.getValue() == 0);
         }
 
         // Build the result list based on the common count map
