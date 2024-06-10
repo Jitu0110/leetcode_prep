@@ -35,6 +35,8 @@ class Solution {
                 
             }
             
+            
+            //The tricky part - setting the groupPrev to its correct position and connecting everything
             ListNode tmp = groupPrev.next;
             groupPrev.next = kth;
             groupPrev = tmp;
