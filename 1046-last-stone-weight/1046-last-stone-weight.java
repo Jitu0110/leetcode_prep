@@ -20,10 +20,6 @@ class Solution {
         }
         
         
-        if(pq.size()==0){
-            return 0;
-        }
-        
-        return pq.poll();
+        return pq.isEmpty() ? 0 : pq.poll();
     }
 }
