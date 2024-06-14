@@ -21,6 +21,12 @@ class Solution {
             dif += gas[i]-cost[i];
             
             if(dif<0){
+                
+                //Not required, but makes it easy to understand
+                // if(i == gas.length-1){
+                //     return -1;
+                // }
+                
                 dif = 0;
                 startIndex = i+1;
             }  
