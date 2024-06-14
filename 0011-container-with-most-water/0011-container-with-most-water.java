@@ -10,6 +10,7 @@ class Solution {
             
             res = Math.max(area,res);
             
+            //Containers height is limited by height[left], so we move it to get a potentially bigger height to increase area
             if(height[left] < height[right]){
                 left++;
             }
