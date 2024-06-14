@@ -19,7 +19,7 @@ class Solution {
         Arrays.sort(hand);
         
         for(int card : hand){
-             if (map.get(card) <= 0) continue;
+             if (map.get(card) == 0) continue;
             
             for(int i = 1; i< groupSize; i++){
                 int currCount = map.getOrDefault(card+i,0);
