@@ -15,15 +15,12 @@ class Solution {
             return -1;
         }
         
+        //When it comes here, there is a solution
+        
         for(int i = 0;i<gas.length; i++){
             dif += gas[i]-cost[i];
             
             if(dif<0){
-                
-                if(i == gas.length-1){
-                    return -1;
-                }
-                
                 dif = 0;
                 startIndex = i+1;
             }  
