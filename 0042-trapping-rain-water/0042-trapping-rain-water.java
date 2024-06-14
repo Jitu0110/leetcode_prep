@@ -9,6 +9,7 @@ class Solution {
         
         while(l < r){
         
+            //By moving the shorter bar, there is a possibility of finding a bigger bar and trapping more water
             if(height[l]<=height[r]){
                 l++;
                 leftMax = Math.max(leftMax,height[l]);
